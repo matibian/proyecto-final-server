@@ -1,0 +1,53 @@
+<html lang='es'>
+  <head>
+    {{>head}}
+  </head>
+  <body>
+    {{>navbar}}
+    {{!-- {{>navbar}} --}}
+    <br>
+<div height="75vh">
+<table class="table align-content-center" style="text-align: center; margin-bottom: 20%">
+    <thead>
+      <tr>
+        <th scope="col">Numero de orden</th>
+        <th scope="col">Usuario</th>
+        <th scope="col">Dirección</th>
+        <th scope="col">Envío</th>
+        <th scope="col">Orden</th>
+        <th scope="col">Total</th>
+      </tr>
+    </thead>
+            {{#if orders}}
+        {{#each orders}}
+        <tr>
+          <td>{{this.ordernumber}} </td>
+          <td>{{this.buyer.mail}} </td>
+          <td>{{this.buyer.address}} </td>
+          <td>{{this.envio}} </td>
+          <td>
+            <ul>
+              {{#each carrito}}
+              <li style="list-style: none">{{this.name}} - ${{this.price}} - {{this.quantity}}</li>
+              {{/each}}
+            </ul>
+           
+          </td>
+          <td>${{this.total}}</td>
+        </tr>
+        {{/each}}
+        </tbody>
+      </table>
+      {{else}}
+      </tbody>
+      </table>
+        No hay ordenes todavía
+      {{/if}}
+      </div>
+
+
+    <script src="../index.js"></script>
+
+  </body>
+   {{> footer}}
+</html>

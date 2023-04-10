@@ -1,0 +1,41 @@
+<form onsubmit="return false" class="d-flex align-items-center flex-column">
+  <div class="mb-3">
+    <input type="text" id="productos" placeholder="Producto" name="name" />
+  </div>
+  <div class="mb-3">
+    <input type="text" id="precio" placeholder="Precio" name="price" />
+  </div>
+  <div class="mb-3">
+    <input
+      type="text"
+      id="description"
+      placeholder="Descripción"
+      name="description"
+    />
+  </div>
+  <div class="mb-3">
+    <input type="text" id="category" placeholder="Categoría" name="category" />
+  </div>
+  <div class="mb-3">
+    <input type="number" id="stock" placeholder="Stock" name="stock" />
+  </div>
+  <div>
+    <label for="nov">Novedad:</label>
+
+    <select name="nov" id="nov">
+      <option value="true">Si</option>
+      <option value="false">No</option>
+
+    </select>
+  </div>
+  <div class="mb-3">
+    <input
+      type="text"
+      id="imagen"
+      placeholder="URL de imagen"
+      name="thumbnail"
+    />
+  </div>
+  <button type="submit" onclick="botonProd()" class="btn btn-secondary">Subir
+    producto</button>
+</form>

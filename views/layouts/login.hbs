@@ -1,0 +1,54 @@
+<html lang='es'>
+  <head>
+    {{>head}}
+  </head>
+  <body>
+    <br>
+    <br>
+    <div class="title">
+      {{{title}}}
+    </div>
+    <br>
+            <div class="row justify-content-md-center">
+              <div class="col-md-6">
+                <div class="card mt-4" style="margin-top: 0px !important">
+                  <div class="card-body">
+  <form 
+    {{!-- onsubmit="return false"  --}}
+    action= "{{host}}/auth/login"
+    method="post"
+    class="d-flex align-items-center flex-column">
+    <div class="mb-3">
+        <input
+        type="text"
+        id="email"
+        placeholder="Email"
+        name="email"
+        />
+    </div>
+    <div class="mb-3">
+        <input
+        type="password"
+        autocomplete="password"
+        id="password"
+        placeholder="Contraseña"
+        name="password"
+        />
+    </div>
+    <input type="hidden" name="login" value="admin" />
+    <button 
+        type="submit" 
+        class="btn btn-secondary">Login</button>
+    </form>
+</div>
+</div>
+</div>
+</div>
+
+  <script src="../index.js"></script>
+  </body>
+  <br>
+  <br>
+     {{> footer}}
+  
+</html>
