@@ -2,7 +2,7 @@ const jwt = require("jsonwebtoken");
 const UserModel = require("../models/mongoModels/usersModel");
 const { default: mongoose } = require("mongoose");
 const User = mongoose.model("users", UserModel);
-const modo = process.argv[3];
+const modo = process.argv[2];
 
 const authAdmin = async (req, res, next) => {
   try {

@@ -1,5 +1,5 @@
 const MainServer = require("./app");
-const modo = process.argv[3];
+const modo = process.argv[2];
 const server = new MainServer(modo);
 require("dotenv");
 

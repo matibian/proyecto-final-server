@@ -23,13 +23,13 @@ async function getChats(req, res) {
 
 async function getConfig() {
   try {
-    const modo = process.argv[3] ? process.argv[3] : "Prod";
+    const modo = process.argv[2] ? process.argv[2] : "Prod";
     const configs = {};
     configs.modo = modo;
     modo == "dev" || modo == "test"
       ? (configs.persistencia = "Memoria")
       : (configs.persistencia = "MongoDB");
-    configs.host = process.env.HOST;
+    configs.host = process.env.HOST + ":" + process.env.PORT;
     configs.mongo = process.env.MONGO_URI;
     configs.platform = process.platform;
     configs.uptime = process.uptime;

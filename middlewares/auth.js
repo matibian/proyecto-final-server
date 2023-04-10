@@ -3,7 +3,7 @@ const asyncHandler = require("express-async-handler");
 const UserModel = require("../models/mongoModels/usersModel");
 const { default: mongoose } = require("mongoose");
 const User = mongoose.model("users", UserModel);
-const modo = process.argv[3];
+const modo = process.argv[2];
 
 const auth = async (req, res, next) => {
   let token;

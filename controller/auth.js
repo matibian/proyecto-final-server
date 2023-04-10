@@ -76,7 +76,7 @@ const registerUser = asyncHandler(async (req, res) => {
 const loginUser = asyncHandler(async (req, res) => {
   const { email, password, login } = req.body;
   const user = await User.findOne({ email });
-  const modo = process.argv[3];
+  const modo = process.argv[2];
 
   if (user && (await bcrypt.compare(password, user.password))) {
     token = generateToken(user._id);
