@@ -48,7 +48,7 @@ function enviarMsg() {
 
 // Recibe mensajes del back y los renderiza en el DOM
 async function socketEmit() {
-  let user = document.getElementById("user").innerText;
+  let user = document.getElementById("user")?.innerText;
   console.log(user);
   await socket.emit("user", `${user}`);
   await socket.on("msg-list", onMsgEvent);
