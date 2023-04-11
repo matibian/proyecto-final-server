@@ -7,7 +7,6 @@ async function postProducto() {
   producto.category = await document.getElementById("category").value;
   producto.stock = await Number(document.getElementById("stock").value);
   producto.nov = await document.getElementById("nov").value;
-  require("dotenv");
 
   const requestOptions = {
     method: "POST",
