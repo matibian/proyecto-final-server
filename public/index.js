@@ -1,3 +1,4 @@
+const io = require("../app");
 const socket = io();
 
 async function postProducto() {
