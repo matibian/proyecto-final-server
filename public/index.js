@@ -1,6 +1,17 @@
 const socket = io();
 
-// Recibe mensajes del back y los renderiza en el DOM
+async function enviarMsg() {
+  const msgParaEnvio = await document.getElementById("inputMsg").value;
+  let user = await document.getElementById("user").innerText;
+  await socket.emit("msg", {
+    username: user,
+    message: msgParaEnvio,
+    from: "Vortex",
+  });
+  document.getElementById("inputMsg").value = "";
+  return false;
+}
+
 async function socketEmit() {
   let user = document.getElementById("user")?.innerText;
   console.log(user);
