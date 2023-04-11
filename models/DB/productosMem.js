@@ -17,7 +17,6 @@ let productos = [
     price: 20000,
     _id: "G4uOVGnlsbVZHhfwAM4w",
     category: "Camisas",
-
     thumbnail:
       "https://m.media-amazon.com/images/I/41kkW35Aa7S._AC_SL1200_.jpg",
     nov: true,
