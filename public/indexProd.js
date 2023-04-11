@@ -14,7 +14,7 @@ async function postProducto() {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(producto),
   };
-  fetch(process.env.HOST + `/api/products`, requestOptions)
+  fetch(`/api/products`, requestOptions)
     .then((res) => res.json()) // or res.json()
     .then((res) => console.log(res))
     .catch((err) => console.log(err));
@@ -23,7 +23,7 @@ async function postProducto() {
 }
 
 async function eliminar(id) {
-  fetch(process.env.HOST + `/api/products/` + id, { method: "DELETE" })
+  fetch(`/api/products/` + id, { method: "DELETE" })
     .then((res) => res.text()) // or res.json()
     .then((res) => console.log(res))
     .catch((err) => console.log(err));
