@@ -1,4 +1,3 @@
-const io = require("../app");
 const socket = io();
 
 async function postProducto() {
@@ -32,17 +31,21 @@ async function eliminar(id) {
   location.reload();
 }
 
-function botonProd() {
-  postProducto();
-  location.reload();
+async function botonProd() {
+  await postProducto();
+  await location.reload();
 }
 
 // Recibe mensajes del back y los renderiza en el DOM
 
-function enviarMsg() {
-  const msgParaEnvio = document.getElementById("inputMsg").value;
-  let user = document.getElementById("user").innerText;
-  socket.emit("msg", { username: user, message: msgParaEnvio, from: "Vortex" });
+async function enviarMsg() {
+  const msgParaEnvio = await document.getElementById("inputMsg").value;
+  let user = await document.getElementById("user").innerText;
+  await socket.emit("msg", {
+    username: user,
+    message: msgParaEnvio,
+    from: "Vortex",
+  });
   document.getElementById("inputMsg").value = "";
   return false;
 }
