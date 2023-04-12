@@ -10,6 +10,8 @@ const productModel = new mongoose.Schema({
   timestamp: { type: String, required: false, max: 100 },
   quantity: { type: Number, required: false },
   category: { type: String, required: false },
+  more: { type: String, required: false },
+  stars: { type: Number, required: false },
   // _id: { type: String, required: false },
   // id: { type: String, required: false },
 });

@@ -7,6 +7,8 @@ async function postProducto() {
   producto.category = await document.getElementById("category").value;
   producto.stock = await Number(document.getElementById("stock").value);
   producto.nov = await document.getElementById("nov").value;
+  producto.more = await document.getElementById("more").value;
+  producto.stars = await parseInt(document.getElementById("stars").value);
 
   const requestOptions = {
     method: "POST",
