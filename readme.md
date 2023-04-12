@@ -28,12 +28,12 @@ Develop mode
 Production mode
 `npm run prod`
 
-    Toda la persistencia en MongoDB con mangoose
+    Toda la persistencia en MongoDB con mongoose
 
 Test mode
 `npm run test`
 
-    Test mocha de existencia, creación, y eliminación de un producto.
+    Test mocha de lectura, creación, y eliminación de un producto.
 
 ## Descripción
 
