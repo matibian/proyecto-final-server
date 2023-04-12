@@ -41,3 +41,6 @@ VORTEX es un proyecto ecommerce realizado en React.js y Express de venta de ropa
 El server almacena y administra productos, chats, envíos y muestra la configuración del servidor.
 La vista del servidor está realizada en Handlebars con Bootstrap.
 La autenticación se realizo con el método de JWT.
+Para administrar el servidor es necesario un usuario administrador:
+usuario: admin@admin.com
+password: admin1234

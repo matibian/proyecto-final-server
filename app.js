@@ -10,6 +10,7 @@ const websocket = require("./service/chat.js");
 const routerCart = require("./routes/cart");
 const routerProducts = require("./routes/products");
 const routerAuth = require("./routes/auth.js");
+const routerPresentation = require("./routes/presentation.js");
 const routerAdmin = require("./routes/admin");
 const { MongoSession, MongoDBService } = require("./config/services");
 const routerOrders = require("./routes/orders");
@@ -31,6 +32,7 @@ class Server {
     app.use("/api/cart", routerCart);
     app.use("/admin", routerAdmin);
     app.use("/auth", routerAuth);
+    app.use("/", routerPresentation);
   }
 
   middlewares(modo) {

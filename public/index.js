@@ -14,9 +14,8 @@ async function enviarMsg() {
 
 async function socketEmit() {
   let user = document.getElementById("user")?.innerText;
-  console.log(user);
   await socket.emit("user", `${user}`);
-  await socket.on("msg-list", onMsgEvent);
+  // await socket.on("msg-list", onMsgEvent);
 }
 socketEmit();
 
