@@ -56,7 +56,6 @@ async function postProducts(req, res) {
   } catch (error) {
     logger.error(error);
     res.status(500);
-    // .render("error", { error: error, layout: "error" });
   }
 }
 

@@ -17,7 +17,6 @@ const chatSchema = new mongoose.Schema({
 });
 chatSchema.plugin(findOrCreate);
 
-// const UsuariosProd = mongoose.model("usersprod", messageSchema);
 module.exports = {
   messageSchema,
   chatSchema,

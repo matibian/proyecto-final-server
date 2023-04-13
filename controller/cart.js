@@ -1,8 +1,6 @@
 const DAOcart = require("../models/DAOs/DAOcart");
 const DAOusers = require("../models/DAOs/DAOusers");
-const DAOcheckout = require("../models/DAOs/DAOcheckout");
 const logger = require("../middlewares/logger");
-// const ContUsers = new ContainerUsers();
 
 async function postProdCart(req, res) {
   try {

@@ -1,5 +1,4 @@
 const jwt = require("jsonwebtoken");
-const asyncHandler = require("express-async-handler");
 const UserModel = require("../models/mongoModels/usersModel");
 const { default: mongoose } = require("mongoose");
 const User = mongoose.model("users", UserModel);

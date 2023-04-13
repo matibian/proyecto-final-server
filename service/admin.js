@@ -30,7 +30,8 @@ async function getConfig() {
       ? (configs.persistencia = "Memoria")
       : (configs.persistencia = "MongoDB");
     configs.host = process.env.HOST + ":" + process.env.PORT;
-    configs.mongo = process.env.MONGO_URI;
+    configs.mongoUser = process.env.USERMONGO;
+    configs.mongoPass = process.env.PASSMONGO;
     configs.platform = process.platform;
     configs.uptime = process.uptime;
 

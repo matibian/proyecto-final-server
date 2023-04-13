@@ -1,45 +1,35 @@
-<html lang='es'>
-  <head>
-    {{>head}}
-  </head>
-  <body>
-    <div class="title">
-      {{{title}}}
-    </div>
-    <br>
-      <div class="container-md" style="width: 100vh">
-        <table class="table align-content-center">
-        <tbody id="tbodyProdTest">
-          <tr>
-            <td>Modo: </td>
-            <td>{{config.modo}} </td>
-          </tr>
-          <tr>
-            <td>Persistencia: </td>
-            <td>{{config.persistencia}} </td>
-          </tr>
-          <tr>
-            <td>HOST: </td>
-            <td>{{config.host}} </td>
-          </tr>
-          <tr>
-            <td>Mongo URI: </td>
-            <td>{{config.mongo}} </td>
-          </tr>
-          <tr>
-            <td>Server platform: </td>
-            <td>{{config.platform}} </td>
-          </tr>
-          <tr>
-            <td>Uptime : </td>
-            <td>{{config.uptime}} </td>
-          </tr>
-        </tbody>
-        </table>
-      </div>
-  </body>
-  {{> footer}}
-</html>
-
-
-
+<br />
+<div class="container-md" style="width: 70vh">
+  <table class="table align-content-center">
+    <tbody id="tbodyProdTest">
+      <tr>
+        <td>Modo: </td>
+        <td>{{config.modo}} </td>
+      </tr>
+      <tr>
+        <td>Persistencia: </td>
+        <td>{{config.persistencia}} </td>
+      </tr>
+      <tr>
+        <td>HOST: </td>
+        <td>{{config.host}} </td>
+      </tr>
+      <tr>
+        <td> Mongo USER: </td>
+        <td>{{config.mongoUser}}</td>
+      </tr>
+      <tr>
+        <td> Mongo PASS: </td>
+        <td>{{config.mongoPass}}</td>
+      </tr>
+      <tr>
+        <td>Server platform: </td>
+        <td>{{config.platform}} </td>
+      </tr>
+      <tr>
+        <td>Uptime : </td>
+        <td>{{config.uptime}} </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

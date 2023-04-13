@@ -7,13 +7,8 @@ const config = require("./config/config");
 const httpServer = require("http").createServer(app);
 const io = require("socket.io")(httpServer);
 const websocket = require("./service/chat.js");
-const routerCart = require("./routes/cart");
-const routerProducts = require("./routes/products");
-const routerAuth = require("./routes/auth.js");
-const routerPresentation = require("./routes/presentation.js");
-const routerAdmin = require("./routes/admin");
+const routes = require("./routes/index");
 const { MongoSession, MongoDBService } = require("./config/services");
-const routerOrders = require("./routes/orders");
 
 class Server {
   constructor(modo) {
@@ -27,15 +22,15 @@ class Server {
   }
 
   routes() {
-    app.use("/api/products", routerProducts);
-    app.use("/api/orders", routerOrders);
-    app.use("/api/cart", routerCart);
-    app.use("/admin", routerAdmin);
-    app.use("/auth", routerAuth);
-    app.use("/", routerPresentation);
+    app.use("/api/products", routes.routerProducts);
+    app.use("/api/orders", routes.routerOrders);
+    app.use("/api/cart", routes.routerCart);
+    app.use("/admin", routes.routerAdmin);
+    app.use("/auth", routes.routerAuth);
+    app.use("/", routes.routerPresentation);
   }
 
-  middlewares(modo) {
+  middlewares() {
     app.use(cors());
     app.use(express.json());
     app.use(express.urlencoded({ extended: true }));

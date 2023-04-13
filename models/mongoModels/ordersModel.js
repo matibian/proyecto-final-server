@@ -20,5 +20,4 @@ const orderModel = new mongoose.Schema(
 
 orderModel.plugin(findOrCreate);
 
-// const Products = mongoose.model("productos", productModel);
 module.exports = orderModel;

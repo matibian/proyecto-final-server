@@ -1,6 +1,5 @@
 const mongoose = require("mongoose");
 const productModel = require("../../mongoModels/productModel");
-const ObjectId = require("mongodb").ObjectId;
 
 class DAOProductsMongo {
   constructor() {
@@ -44,7 +43,5 @@ class DAOProductsMongo {
     return products;
   }
 }
-
-// const DAOproductMongo = new DAOProductsMongo();
 
 module.exports = DAOProductsMongo;

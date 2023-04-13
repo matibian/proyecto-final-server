@@ -15,7 +15,6 @@ async function enviarMsg() {
 async function socketEmit() {
   let user = document.getElementById("user")?.innerText;
   await socket.emit("user", `${user}`);
-  // await socket.on("msg-list", onMsgEvent);
 }
 socketEmit();
 
@@ -28,7 +27,7 @@ socket.on("msg-list", (data) => {
           <span style="color: blue">${item.from} </span>
           </td>
           <td>
-           <span style="color: red"> || ${item.timestamp} || : </span>
+            <span style="color: red"> || ${item.timestamp} || : </span>
           </td>
           <td>
           <span style= "color:green"> ${item.message}</span>

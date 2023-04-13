@@ -28,20 +28,10 @@ class DAOmessagesMongo {
   async save(element) {
     try {
       let user = await this.model.findOneAndUpdate(
-        { username: element.username }, // busca el usuario
-        { $push: { chat: element }, timestamp: element.timestamp }, // agrega el mensaje al chat y actualiza el timestamp
-        { upsert: true, new: true } // crea un nuevo usuario si no se encuentra uno existente
+        { username: element.username },
+        { $push: { chat: element }, timestamp: element.timestamp },
+        { upsert: true, new: true }
       );
-      // // let user = await this.model.findOne({ username: element.username });
-      // if (user == null) {
-      //   user = await this.model.create({
-      //     username: element.username,
-      //     chat: [],
-      //   });
-      //   user.chat.push(element);
-      // }
-      // user.timestamp = element.timestamp;
-      // user.chat.push(element);
       await user.save();
     } catch (error) {
       logger.error(error);

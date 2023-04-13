@@ -6,7 +6,10 @@
     {{>navbar}}
     {{!-- {{>navbar}} --}}
     <br>
-<div height="75vh">
+      <div class="row justify-content-md-center">
+        <div class="col-md-10">
+          <div class="card mt-4 shadow-lg p-3 mb-5 bg-white rounded" style="margin-top: 0px !important; height: 67vh; overflow:scroll">
+
 <table class="table align-content-center" style="text-align: center; margin-bottom: 20%">
     <thead>
       <tr>
@@ -31,7 +34,6 @@
               <li style="list-style: none">{{this.name}} - ${{this.price}} - {{this.quantity}}</li>
               {{/each}}
             </ul>
-           
           </td>
           <td>${{this.total}}</td>
         </tr>
@@ -43,6 +45,9 @@
       </table>
         No hay ordenes todavía
       {{/if}}
+      </div>
+      </div>
+      </div>
       </div>
 
 

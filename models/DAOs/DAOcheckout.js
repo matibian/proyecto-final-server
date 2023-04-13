@@ -5,7 +5,6 @@ const { logger } = require("../../middlewares/logger");
 class DAOcheckouts {
   constructor() {
     this.model = mongoose.model("orders", ordersModel);
-    // MongoDBService.init();
   }
 
   async getAll() {
