@@ -1,4 +1,3 @@
-// const productsDAO = require("../models/DAOs/DAOproducts");
 const DAO = require("../models/DAOs/DAOproducts/factoryDAOSproducts");
 const { logger } = require("../middlewares/logger");
 

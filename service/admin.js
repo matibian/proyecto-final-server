@@ -1,6 +1,7 @@
 const DAOmessages = require("../models/DAOs/DAOmessagesMongo");
 const DAOProducts = require("../models/DAOs/DAOproducts/factoryDAOSproducts");
 const { logger } = require("../middlewares/logger.js");
+const moment = require("moment");
 require("dotenv");
 
 async function getAdminProductos() {
@@ -23,6 +24,14 @@ async function getChats(req, res) {
 
 async function getConfig() {
   try {
+    let duration = moment.duration(process.uptime(), "seconds");
+    let days = duration.days();
+    let hours = duration.hours();
+    let minutes = duration.minutes();
+    let seconds = duration.seconds();
+
+    let uptime = `${days} días, ${hours} horas, ${minutes} minutos, ${seconds} segundos`;
+
     const modo = process.argv[2] ? process.argv[2] : "Prod";
     const configs = {};
     configs.modo = modo;
@@ -33,7 +42,7 @@ async function getConfig() {
     configs.mongoUser = process.env.USERMONGO;
     configs.mongoPass = process.env.PASSMONGO;
     configs.platform = process.platform;
-    configs.uptime = process.uptime;
+    configs.uptime = uptime;
 
     return configs;
   } catch (error) {

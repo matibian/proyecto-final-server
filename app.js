@@ -54,7 +54,7 @@ class Server {
   }
   listen() {
     httpServer.listen(config.PORT, () =>
-      console.log(`App listening on ${config.HOST}:${config.PORT}`)
+      console.log(`App listening on ${config.HOST}`)
     );
   }
 }
