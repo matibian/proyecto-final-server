@@ -12,6 +12,13 @@ async function enviarMsg() {
   return false;
 }
 
+let input = document.getElementById("inputMsg");
+input.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
+    document.getElementById("sendButton").click();
+  }
+});
+
 async function socketEmit() {
   let user = document.getElementById("user")?.innerText;
   await socket.emit("user", `${user}`);
